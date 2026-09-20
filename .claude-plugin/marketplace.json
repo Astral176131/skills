@@ -1,0 +1,205 @@
+{
+  "name": "astral-skills",
+  "owner": {
+    "name": "Astral176131"
+  },
+  "description": "Personal collection of vendored Claude Code skills, organized by category (general, frontend, security, devtools). Add this marketplace once in any repo, then install just the skills you want.",
+  "metadata": {
+    "description": "Vendored skills from their upstream repos, pruned to just the SKILL.md content. See the root README.md for full attribution, caveats, and per-skill notes.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "ponytail",
+      "source": "./general/ponytail",
+      "description": "Makes Claude write like 'the laziest senior dev' - reuses stdlib/existing code before writing new code. Ships 6 sub-skills (ponytail, review, audit, debt, gain, help).",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["code-quality", "simplicity", "reuse"]
+    },
+    {
+      "name": "karpathy-skills",
+      "source": "./general/karpathy-skills",
+      "description": "Andrej Karpathy's 4 rules for LLM coding pitfalls: surface assumptions, minimal diffs, surgical edits only, verifiable success criteria.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["code-quality", "discipline", "karpathy"]
+    },
+    {
+      "name": "mattpocock-skills",
+      "source": "./general/mattpocock-skills",
+      "description": "Matt Pocock's real .agents directory: 50+ skills for TDD, code review, domain modeling, architecture.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["tdd", "code-review", "architecture"]
+    },
+    {
+      "name": "ecc",
+      "source": "./general/ecc",
+      "description": "Everything Claude Code - large agent-harness system: skills, instincts, memory, security, research-first workflow.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["agent-harness", "memory", "workflow"]
+    },
+    {
+      "name": "claude-mem",
+      "source": "./general/claude-mem/plugin",
+      "description": "Persistent memory across sessions - captures what an agent did, compresses it, re-injects relevant context into future sessions.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["memory", "context", "persistence"]
+    },
+    {
+      "name": "caveman",
+      "source": "./general/caveman",
+      "description": "Compresses agent output/context ~65-75% by talking in terse 'caveman' prose while keeping code/commands/errors byte-exact.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["token-compression", "context"]
+    },
+    {
+      "name": "planning-with-files",
+      "source": "./general/planning-with-files",
+      "description": "Manus-style persistent markdown planning - crash-proof task plans that survive /clear and context compaction.",
+      "version": "1.0.0",
+      "category": "general",
+      "keywords": ["planning", "context-persistence"]
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "source": "./frontend/ui-ux-pro-max/.claude",
+      "description": "Searchable databases of UI styles, color palettes, font pairings, and UX guidelines to ground design decisions. 7 sub-skills.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["ui", "ux", "design-system"]
+    },
+    {
+      "name": "taste-skill",
+      "source": "./frontend/taste-skill",
+      "description": "Stops AI from generating generic 'slop' frontends - layout, typography, spacing, hierarchy, motion guidance. Multiple style variants.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["frontend", "design", "anti-slop"]
+    },
+    {
+      "name": "superdesign",
+      "source": "./frontend/superdesign",
+      "description": "Gives the agent design judgment so UI ships 'tasteful' instead of generic-AI-looking.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["frontend", "design"]
+    },
+    {
+      "name": "impeccable",
+      "source": "./frontend/impeccable/.claude",
+      "description": "Catalogs 64+ 'AI slop' design patterns (purple gradients, generic defaults) and replaces them. Commands: craft, audit, polish, harden.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["frontend", "design", "anti-slop"]
+    },
+    {
+      "name": "design-motion",
+      "source": "./frontend/design-motion",
+      "description": "Motion design skill with two modes: build components with purposeful motion, or audit existing animations.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["motion", "animation", "design"]
+    },
+    {
+      "name": "figma-implement",
+      "source": "./frontend/figma-implement",
+      "description": "Translates a Figma design into production code with 1:1 visual fidelity. Needs a Figma MCP/API connection.",
+      "version": "1.0.0",
+      "category": "frontend",
+      "keywords": ["figma", "design-to-code"]
+    },
+    {
+      "name": "codegraph",
+      "source": "./devtools/codegraph/.claude",
+      "description": "Pre-indexed, auto-syncing local code knowledge graph - fewer tokens/tool-calls to understand a codebase.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["knowledge-graph", "code-understanding"]
+    },
+    {
+      "name": "graphify",
+      "source": "./devtools/graphify/graphify",
+      "description": "Turns a folder of code/docs/PDFs/images into a queryable, deterministic (AST-based) knowledge graph. Note: ships a lowercase skill.md, not SKILL.md - verify it loads before relying on it.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["knowledge-graph", "code-understanding"]
+    },
+    {
+      "name": "firecrawl",
+      "source": "./devtools/firecrawl",
+      "description": "Web scraping/crawling/search as Claude Code commands+skills, backed by the Firecrawl API. Needs FIRECRAWL_API_KEY.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["web-scraping", "crawling", "search"]
+    },
+    {
+      "name": "codex-plugin-cc",
+      "source": "./devtools/codex-plugin-cc/plugins/codex",
+      "description": "Lets Claude Code delegate a task or code review to OpenAI Codex. Needs a ChatGPT sub or OpenAI API key.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["codex", "delegation", "code-review"]
+    },
+    {
+      "name": "claude-hud",
+      "source": "./devtools/claude-hud",
+      "description": "Local-only HUD plugin: live view of context usage, active tools, running agents, todo progress. No network calls.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["observability", "hud", "context-usage"]
+    },
+    {
+      "name": "wshobson-agents",
+      "source": "./devtools/wshobson-agents",
+      "description": "Large multi-harness collection: subagents, skills, commands, and plugins across every domain (backend, frontend, mobile, etc.).",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["subagents", "multi-domain"]
+    },
+    {
+      "name": "prompt-master",
+      "source": "./devtools/prompt-master",
+      "description": "Writes accurate, tool-specific prompts for 30+ AI tools from a short brief; keeps a memory block of prior decisions.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["prompt-engineering"]
+    },
+    {
+      "name": "find-skills",
+      "source": "./devtools/find-skills",
+      "description": "Discover and install Claude Code skills from 12 community/official sources without leaving the CLI.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["skill-discovery", "meta"]
+    },
+    {
+      "name": "agent-skills-cli",
+      "source": "./devtools/agent-skills-cli",
+      "description": "The generic 'npx skills' installer - auto-detects your agent and installs a skill in the right place/format.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["installer", "meta"]
+    },
+    {
+      "name": "gstack",
+      "source": "./devtools/gstack",
+      "description": "Garry Tan's full virtual-engineering-team setup: role skills (CEO, eng manager, designer, QA, security, release) + power tools.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["engineering-team", "multi-role"]
+    },
+    {
+      "name": "omniroute",
+      "source": "./devtools/omniroute",
+      "description": "Local AI-gateway routing to many providers/models with auto-fallback. CAUTION: independent coverage has flagged security issues/CVEs on this project - review before running.",
+      "version": "1.0.0",
+      "category": "devtools",
+      "keywords": ["ai-gateway", "routing"]
+    }
+  ]
+}
